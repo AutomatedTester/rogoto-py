@@ -1,4 +1,4 @@
 rogoto-py
 =========
 
-A javascript library to parse the Rogoto commands
+A Python library to parse the Rogoto commands
