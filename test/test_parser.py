@@ -14,3 +14,8 @@ def test_pendown():
     parser = RogotoParser()
     results = parser.parse('pendown')
     assert ['pendown'] == results
+
+def test_penup():
+    parser = RogotoParser()
+    results = parser.parse('penup')
+    assert ['penup'] == results

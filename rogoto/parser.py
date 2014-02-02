@@ -7,7 +7,7 @@ class RogotoParser(object):
         self.code_to_execute = []
 
     def parse(self, commands):
-        cmdRegex = r'pendown'
+        cmdRegex = r'pendown|penup'
         matches = re.search(cmdRegex, commands)
         if matches is None:
             raise RogotoParserException('Invalid Syntax was found')
