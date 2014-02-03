@@ -19,3 +19,13 @@ def test_penup():
     parser = RogotoParser()
     results = parser.parse('penup')
     assert ['penup'] == results
+
+def test_forward():
+    parser = RogotoParser()
+    results = parser.parse('forward 10')
+    assert ['forward 10'] == results
+
+def test_forward_abbreviated():
+    parser = RogotoParser()
+    results = parser.parse('fd 10')
+    assert ['forward 10'] == results
