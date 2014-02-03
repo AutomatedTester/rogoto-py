@@ -49,3 +49,13 @@ def test_left_abbreviated():
     parser = RogotoParser()
     results = parser.parse('lt 10')
     assert ['left 10'] == results
+
+def test_right():
+    parser = RogotoParser()
+    results = parser.parse('right 10')
+    assert ['right 10'] == results
+
+def test_right_abbreviated():
+    parser = RogotoParser()
+    results = parser.parse('rt 10')
+    assert ['right 10'] == results
