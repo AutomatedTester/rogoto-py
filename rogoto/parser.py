@@ -7,7 +7,7 @@ class RogotoParser(object):
         self.code_to_execute = []
 
     def parse(self, commands):
-        cmdRegex = r'pendown|penup|forward \d+|fd \d+|backward \d+|bk \d+'
+        cmdRegex = r'pendown|penup|forward \d+|fd \d+|backward \d+|bk \d+|left \d+|lt \d+'
         matches = re.search(cmdRegex, commands)
         if matches is None:
             raise RogotoParserException('Invalid Syntax was found')
@@ -16,6 +16,8 @@ class RogotoParser(object):
                 self.code_to_execute.append(matches.group(0).replace('fd', 'forward'))
             elif 'bk' in matches.group(0):
                 self.code_to_execute.append(matches.group(0).replace('bk', 'backward'))
+            elif 'lt' in matches.group(0):
+                self.code_to_execute.append(matches.group(0).replace('lt', 'left'))
             else:
                 self.code_to_execute.append(matches.group(0))
 
