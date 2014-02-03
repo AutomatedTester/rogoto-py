@@ -59,3 +59,10 @@ def test_right_abbreviated():
     parser = RogotoParser()
     results = parser.parse('rt 10')
     assert ['right 10'] == results
+
+def test_can_clear_code_array():
+    parser = RogotoParser()
+    results = parser.parse('rt 10')
+    assert ['right 10'] == results
+    parser.clear()
+    assert [] == parser.code_to_execute

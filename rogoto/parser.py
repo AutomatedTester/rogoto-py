@@ -25,6 +25,9 @@ class RogotoParser(object):
 
         return self.code_to_execute
 
+    def clear(self):
+        self.code_to_execute = []
+
 
 class RogotoParserException(Exception):
     """Exception object when there is invalid items in the code """
