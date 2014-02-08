@@ -66,3 +66,8 @@ def test_can_clear_code_array():
     assert ['right 10'] == results
     parser.clear()
     assert [] == parser.code_to_execute
+
+def test_multiline_parser():
+    parser = RogotoParser()
+    results = parser.parse('pendown\nfd 10\nlt 45\nfd 10\npenup')
+    assert ['pendown', 'forward 10', 'left 45', 'forward 10', 'penup'] == results
