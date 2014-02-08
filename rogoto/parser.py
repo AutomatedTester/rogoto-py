@@ -5,6 +5,7 @@ class RogotoParser(object):
     """Parse Rogoto Commands"""
     def __init__(self):
         self.code_to_execute = []
+        self.pen_state = 'up'
 
     def parse(self, commands):
         cmdRegex = r'pendown|pd|penup|pu|forward \d+|fd \d+|backward \d+|bk \d+|left \d+|lt \d+|right \d+|rt \d+'
@@ -24,10 +25,16 @@ class RogotoParser(object):
                     self.code_to_execute.append(matches.group(0).replace('rt', 'right'))
                 elif 'pd' in matches.group(0):
                     self.code_to_execute.append('pendown')
+                    self.pen_state = 'down'
                 elif 'pu' in matches.group(0):
                     self.code_to_execute.append('penup')
+                    self.pen_state = 'up'
                 else:
                     self.code_to_execute.append(matches.group(0))
+                    if matches.group(0) == 'penup':
+                        self.pen_state = 'up'
+                    elif matches.group(0) == 'pendown':
+                        self.pen_state = 'pendown'
 
         return self.code_to_execute
 

@@ -77,6 +77,14 @@ def test_can_clear_code_array():
     parser.clear()
     assert [] == parser.code_to_execute
 
+def test_can_keep_pen_state():
+    parser = RogotoParser()
+    assert parser.pen_state == 'up'
+    parser.parse('pd')
+    assert parser.pen_state == 'down'
+    parser.parse('penup')
+    assert parser.pen_state == 'up'
+
 def test_multiline_parser():
     parser = RogotoParser()
     results = parser.parse('pendown\nfd 10\nlt 45\nfd 10\npenup')
