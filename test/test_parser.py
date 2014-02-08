@@ -15,9 +15,19 @@ def test_pendown():
     results = parser.parse('pendown')
     assert ['pendown'] == results
 
+def test_pendown_abbreviated():
+    parser = RogotoParser()
+    results = parser.parse('pd')
+    assert ['pendown'] == results
+
 def test_penup():
     parser = RogotoParser()
     results = parser.parse('penup')
+    assert ['penup'] == results
+
+def test_penup_abbreviated():
+    parser = RogotoParser()
+    results = parser.parse('pu')
     assert ['penup'] == results
 
 def test_forward():

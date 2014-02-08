@@ -7,7 +7,7 @@ class RogotoParser(object):
         self.code_to_execute = []
 
     def parse(self, commands):
-        cmdRegex = r'pendown|penup|forward \d+|fd \d+|backward \d+|bk \d+|left \d+|lt \d+|right \d+|rt \d+'
+        cmdRegex = r'pendown|pd|penup|pu|forward \d+|fd \d+|backward \d+|bk \d+|left \d+|lt \d+|right \d+|rt \d+'
         cmd = commands.split('\n')
         for x in range(len(cmd)):
             matches = re.search(cmdRegex, cmd[x])
@@ -22,6 +22,10 @@ class RogotoParser(object):
                     self.code_to_execute.append(matches.group(0).replace('lt', 'left'))
                 elif 'rt' in matches.group(0):
                     self.code_to_execute.append(matches.group(0).replace('rt', 'right'))
+                elif 'pd' in matches.group(0):
+                    self.code_to_execute.append('pendown')
+                elif 'pu' in matches.group(0):
+                    self.code_to_execute.append('penup')
                 else:
                     self.code_to_execute.append(matches.group(0))
 
