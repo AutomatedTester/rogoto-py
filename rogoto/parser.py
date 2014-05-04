@@ -4,10 +4,18 @@ import re
 class RogotoParser(object):
     """Parse Rogoto Commands"""
     def __init__(self):
+        """
+            When creating a new class it will initialise with an empty
+            array of code to execute and the pen state to be up.
+        """
         self.code_to_execute = []
         self.pen_state = 'up'
 
     def parse(self, commands):
+        """
+            Parses a string to find the Rogoto commands and returns an array of the
+            commands.
+        """
         cmdRegex = r'pendown|pd|penup|pu|forward \d+|fd \d+|backward \d+|bk \d+|left \d+|lt \d+|right \d+|rt \d+'
         cmd = commands.split('\n')
         for x in range(len(cmd)):
@@ -39,6 +47,9 @@ class RogotoParser(object):
         return self.code_to_execute
 
     def clear(self):
+        """
+            Clears the code that will be executed
+        """
         self.code_to_execute = []
 
 
