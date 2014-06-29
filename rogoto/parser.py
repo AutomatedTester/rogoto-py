@@ -16,11 +16,11 @@ class RogotoParser(object):
             Parses a string to find the Rogoto commands and returns an array of the
             commands.
 
-            Args:
+            :param commands:
                 commands (str): A string of commands that are seperated by a \\\\n character
 
-            Returns:
-                list. A list of the commands that have been parsed so that they can be executed
+            Return list
+                 A list of the commands that have been parsed so that they can be executed
                  by iterating over the list
 
         """

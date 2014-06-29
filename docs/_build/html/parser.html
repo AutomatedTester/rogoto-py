@@ -23,7 +23,8 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="RogotoParser 0.1 documentation" href="index.html" /> 
+    <link rel="top" title="RogotoParser 0.1 documentation" href="index.html" />
+    <link rel="prev" title="Welcome to RogotoParser’s documentation!" href="index.html" /> 
   </head>
   <body>
     <div class="related">
@@ -35,6 +36,9 @@
         <li class="right" >
           <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Welcome to RogotoParser’s documentation!"
+             accesskey="P">previous</a> |</li>
         <li><a href="index.html">RogotoParser 0.1 documentation</a> &raquo;</li> 
       </ul>
     </div>  
@@ -44,41 +48,38 @@
         <div class="bodywrapper">
           <div class="body">
             
-  <div class="section" id="module-parser">
-<span id="parser"></span><h1>Parser<a class="headerlink" href="#module-parser" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="module-rogoto">
+<span id="parser"></span><h1>Parser<a class="headerlink" href="#module-rogoto" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
-<dt id="parser.RogotoParser">
-<em class="property">class </em><tt class="descclassname">parser.</tt><tt class="descname">RogotoParser</tt><a class="headerlink" href="#parser.RogotoParser" title="Permalink to this definition">¶</a></dt>
+<dt id="rogoto.RogotoParser">
+<em class="property">class </em><tt class="descclassname">rogoto.</tt><tt class="descname">RogotoParser</tt><a class="headerlink" href="#rogoto.RogotoParser" title="Permalink to this definition">¶</a></dt>
 <dd><p>Parse Rogoto Commands</p>
 <dl class="method">
-<dt id="parser.RogotoParser.clear">
-<tt class="descname">clear</tt><big>(</big><big>)</big><a class="headerlink" href="#parser.RogotoParser.clear" title="Permalink to this definition">¶</a></dt>
+<dt id="rogoto.RogotoParser.clear">
+<tt class="descname">clear</tt><big>(</big><big>)</big><a class="headerlink" href="#rogoto.RogotoParser.clear" title="Permalink to this definition">¶</a></dt>
 <dd><p>Clears the code that will be executed</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="parser.RogotoParser.parse">
-<tt class="descname">parse</tt><big>(</big><em>commands</em><big>)</big><a class="headerlink" href="#parser.RogotoParser.parse" title="Permalink to this definition">¶</a></dt>
+<dt id="rogoto.RogotoParser.parse">
+<tt class="descname">parse</tt><big>(</big><em>commands</em><big>)</big><a class="headerlink" href="#rogoto.RogotoParser.parse" title="Permalink to this definition">¶</a></dt>
 <dd><p>Parses a string to find the Rogoto commands and returns an array of the
 commands.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>commands</strong> &#8211; commands (str): A string of commands that are seperated by a \n character</td>
+</tr>
+</tbody>
+</table>
 <dl class="docutils">
-<dt>Args:</dt>
-<dd>commands (str): A string of commands that are seperated by a \n character</dd>
-<dt>Returns:</dt>
-<dd><dl class="first last docutils">
-<dt>list. A list of the commands that have been parsed so that they can be executed</dt>
-<dd>by iterating over the list</dd>
-</dl>
-</dd>
+<dt>Return list</dt>
+<dd>A list of the commands that have been parsed so that they can be executed
+by iterating over the list</dd>
 </dl>
 </dd></dl>
 
-</dd></dl>
-
-<dl class="exception">
-<dt id="parser.RogotoParserException">
-<em class="property">exception </em><tt class="descclassname">parser.</tt><tt class="descname">RogotoParserException</tt><big>(</big><em>message</em><big>)</big><a class="headerlink" href="#parser.RogotoParserException" title="Permalink to this definition">¶</a></dt>
-<dd><p>Exception object when there is invalid items in the code</p>
 </dd></dl>
 
 </div>
@@ -89,6 +90,9 @@ commands.</p>
       </div>
       <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="index.html"
+                        title="previous chapter">Welcome to RogotoParser&#8217;s documentation!</a></p>
   <h3>This Page</h3>
   <ul class="this-page-menu">
     <li><a href="_sources/parser.txt"
@@ -120,6 +124,9 @@ commands.</p>
         <li class="right" >
           <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Welcome to RogotoParser’s documentation!"
+             >previous</a> |</li>
         <li><a href="index.html">RogotoParser 0.1 documentation</a> &raquo;</li> 
       </ul>
     </div>

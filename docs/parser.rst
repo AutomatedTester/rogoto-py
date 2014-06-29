@@ -1,6 +1,7 @@
 Parser
 ======
 
-.. automodule:: parser
+.. module:: rogoto
+.. autoclass:: RogotoParser
    :members:
    :undoc-members:
